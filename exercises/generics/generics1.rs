@@ -6,6 +6,6 @@
 // I AM NOT DONE
 
 fn main() {
-    let mut shopping_list: Vec<?> = Vec::new();
-    shopping_list.push("milk");
+  let mut shopping_list: Vec<&str> = Vec::new();
+  shopping_list.push("milk");
 }
