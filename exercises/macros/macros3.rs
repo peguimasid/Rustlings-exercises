@@ -4,14 +4,16 @@
 
 // I AM NOT DONE
 
-mod macros {
-    macro_rules! my_macro {
-        () => {
-            println!("Check out my macro!");
-        };
-    }
+mod math {
+  #[macro_export]
+  macro_rules! multiply {
+    ($a: expr, $b: expr) => {
+      println!("{}", $a * $b);
+    };
+  }
+  pub(crate) use multiply;
 }
 
 fn main() {
-    my_macro!();
+  math::multiply!(4, 3);
 }
